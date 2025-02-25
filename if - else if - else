@@ -20,6 +20,8 @@ public class Teste4 {
             System.out.println("Voce e adulto");
         }else {
             System.out.println("Voce e idoso");
+
+            scanner.close();
         }
     }
 }
