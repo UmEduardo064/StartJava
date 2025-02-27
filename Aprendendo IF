@@ -7,7 +7,7 @@ public class Teste4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("De a sua idade");
+        System.out.println("Coloque a sua idade");
         int id = scanner.nextInt();
         
         if(id <= 0){
