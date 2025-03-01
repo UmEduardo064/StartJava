@@ -1,0 +1,41 @@
+package com.mycompany.praticacalculadora;
+import java.util.Scanner;
+public class PraticaCalculadora {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite Valor1");
+        double n1 = scanner.nextDouble();
+        
+        System.out.println("Digite Operacao");
+        char op = scanner.next().charAt(0);
+        
+        System.out.println("Digite Valor2");
+        double n2 = scanner.nextDouble();
+        
+        double re = 0;
+        switch(op){
+            case '+' -> re = n1 + n2;
+            
+            case '-' -> re = n1 - n2;
+            
+            case '*' -> re = n1 * n2;
+            
+            case '/' -> {
+                if(n2 != 0){
+                    re = n1 / n2;
+                    System.out.printf("Operacao com 0 resposta %f", re);
+                }else {
+                    System.out.println("Valor 0 invalido");
+                    return;
+                }
+            }
+            
+            default -> System.out.printf("respota %f", re);
+        }
+        
+        System.out.printf("resposta e %f", re);
+        scanner.close();
+    }
+}
