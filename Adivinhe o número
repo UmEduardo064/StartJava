@@ -1,0 +1,30 @@
+package com.mycompany.praticacalculadora;
+import java.util.Random;
+import java.util.Scanner;
+public class PraticaCalculadora {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        
+            int nVeses = 0; 
+            int chute;
+            int nAleatorio = random.nextInt(100);
+            
+            do{
+                System.out.println("Chute um numero: ");
+                chute = scanner.nextInt();
+                nVeses++;
+                
+                if(chute < nAleatorio){
+                    System.out.println("Tente um pouco mais");
+                    
+                }else if(chute > nAleatorio){
+                    System.out.println("Tente um pouco menos");
+                    
+                }else {
+                    System.out.printf("Voce Ganhou, o numero era:  %d e em %d veses", nAleatorio, nVeses);
+                }
+                } while(chute != nAleatorio);
+            
+            scanner.close();
