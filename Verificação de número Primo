@@ -1,0 +1,37 @@
+package com.mycompany.prime;
+import java.util.Scanner;
+public class PraticaCalculadora {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Type a number");
+        int n1 = scanner.nextInt();
+        
+        boolean isPrime = true;
+        
+        
+        if(n1 <= 1){
+            isPrime = false;
+            
+        }else {
+            
+            for (byte i = 2; i <= Math.sqrt(n1); i++){
+                if( n1 % i == 0)
+                    isPrime = false;
+                break;
+                        
+            }
+            
+        }
+        
+        if(isPrime){
+            System.out.printf(" The number %d is prime ", n1);
+            
+        }else {
+            System.out.printf("The number %d isn't prime", n1);
+        }
+        
+        scanner.close();
+    }
+}
