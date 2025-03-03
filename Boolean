@@ -1,0 +1,24 @@
+package com.mycompany.boolean;
+import java.util.Scanner;
+public class PraticaCalculadora {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int n1;
+        
+        System.out.println("Type a nunber: ");
+        n1 = scanner.nextInt();
+        
+        boolean isEven = (n1 % 2 == 0);
+        
+        if(isEven){
+            System.out.println("This even number");
+        }else {
+            System.out.println("This odd number");
+        }
+        
+        
+        scanner.close();
+    }
+}
