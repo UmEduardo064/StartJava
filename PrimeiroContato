@@ -19,7 +19,7 @@ public class Teste {
         
             double re = n1 + n2;
             double re2 = n1 - n2;
-            double re3 = n1 / n2; //
+            double re3 = n1 * n2;
             double re31 = n1 / n2;
             double re4 = n1 % n2;
         
