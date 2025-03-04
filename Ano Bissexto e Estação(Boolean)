@@ -1,0 +1,37 @@
+package com.mycompany.praticacalculadora;
+import java.util.Scanner;
+public class PraticaCalculadora {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Type a Year");
+        int year = scanner.nextInt();
+        
+        System.out.println("Type a Month (1 - 12): ");
+        int month = scanner.nextInt();
+
+        boolean isleap= (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        
+        boolean isSpring = (month >= 3 && month <= 5);
+        boolean isSummer = (month >= 6 && month <= 8);
+        boolean isAutunm = (month >= 9 && month <= 11);
+        boolean isWinter = (month == 12 || month == 1 || month == 2);
+        
+        System.out.println("The year " + year +(isleap ? " is a Leap year." : " isn't Leap year."));
+        
+        if(isSpring){
+            System.out.println("We are in Spring");
+        }else if(isSummer){
+            System.out.println("We are in Summer");
+        }else if(isAutunm) {
+            System.out.println("We are in Spring");
+        }else if(isWinter){
+            System.out.println("We are in Spring");
+        }else {
+            System.out.println("Error");
+        }
+        
+        scanner.close();
+    }
+}
