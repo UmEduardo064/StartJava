@@ -20,17 +20,17 @@ public class Teste {
             double re = n1 + n2;
             double re2 = n1 - n2;
             double re3 = n1 * n2;
-            double re31 = n1 / n2;
-            double re4 = n1 % n2;
+            double re4 = n1 / n2;
+            double re5 = n1 % n2;
         
-            System.out.println("resu e + " + re);
-            System.out.println("resu e - " + re2);
-            System.out.println("resu inteiro para e / " + re3);
-            System.out.println("resu real para e /  " + re31);
-            System.out.println("resu e % " + re4);
+            System.out.println("resu e "+" " + re);
+            System.out.println("resu e "-" " + re2);
+            System.out.println("resu e "*" " + re3);
+            System.out.println("resu e "/"  " + re4);
+            System.out.println("resu e "%" " + re5);
         
         } catch (InputMismatchException e) {
-            System.out.println("Erro, enrada invalida");
+            System.out.println("Erro, entrada invalida");
         } finally {
             scanner.close();
         }
