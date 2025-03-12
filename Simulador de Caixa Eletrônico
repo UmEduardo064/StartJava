@@ -1,0 +1,48 @@
+package com.mycompany.java20;
+import java.util.Scanner;
+public class Java20 {
+    
+
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in);
+        
+        double yourBalance = 1000;
+        
+        System.out.print("""
+                         1. See your Balance (SB)
+                         2. Deposit in your Balance (DB)
+                         3. Withdraw a Value (WV)
+                         4. Log Out (Log)
+                         """);             
+                         String chooseOption = sca.nextLine();
+                         
+            if (chooseOption.equals("1") ||chooseOption.equals("sb" )) {
+            
+                System.out.printf("Your balance is $%.2f", yourBalance);
+
+                
+            }else if(chooseOption.equals("2") ||chooseOption.equals("db")){
+                
+                System.out.println("How many will deposit? ");
+                double validDeposit = sca.nextDouble();
+                
+                yourBalance = validDeposit + yourBalance;
+                
+                System.out.printf("Deposit concluid! You have $%.2f now", yourBalance);
+                
+                
+            }else if(chooseOption.equals("3") ||chooseOption.equals("wv")){
+                
+                System.out.println("How many will Withdraw? ");
+                double validWithdraw = sca.nextDouble();
+                
+                yourBalance = yourBalance - validWithdraw;
+                
+                System.out.printf("Withdraw concluid! You have $%.2f now", yourBalance);
+            }else {
+                System.out.println("Error");
+            }
+        }
+    }
+
+
