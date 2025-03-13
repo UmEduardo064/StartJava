@@ -51,6 +51,8 @@ public class Java20 {
             
         }while (!chooseOption.equals("4") && !chooseOption.equalsIgnoreCase("log") );
         System.out.println("fineshed");
+
+sca.close();
         
         }
     }
