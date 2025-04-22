@@ -23,21 +23,18 @@ public class Java20 {
         }else if(chooseOption.equals("2") ||chooseOption.equalsIgnoreCase("db")){
             System.out.println("How many will deposit? ");
             double validDeposit = sca.nextDouble();
-            sca.nextLine();
             yourBalance += validDeposit;
                 
             System.out.printf("Deposit concluid! You have $%.2f now\n ", yourBalance);
             
         }else if(chooseOption.equals("3") ||chooseOption.equals("wv")){
-            
             if (yourBalance > 0) {
-                System.out.println("How many will Withdraw?\n ");
+            System.out.println("How many will Withdraw?\n ");
             double validWithdraw = sca.nextDouble();
-            sca.nextLine();
-                
             yourBalance -= validWithdraw;
                 
             System.out.printf("Withdraw concluid! You have $%.2f now", yourBalance);
+                
             }else {
                 System.out.println("You don't have enough balance ");
             }
